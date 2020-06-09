@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".Firebase.FirebaseMainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:reverseLayout="false"
+            app:stackFromEnd="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <EditText
+            android:id="@+id/edt_msg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8" />
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_send" />
+
+    </LinearLayout>
+</LinearLayout>
